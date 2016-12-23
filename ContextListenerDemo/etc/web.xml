@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+		 version="2.4">
+
+	<servlet>
+		<servlet-name>PlayerInfo</servlet-name>
+		<servlet-class>org.andgomes.web.PlayerInfoServlet</servlet-class>
+	</servlet>
+
+	<context-param>
+		<param-name>player-name</param-name>
+		<param-value>Jay Rodriguez</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>player-club</param-name>
+		<param-value>Tottenham</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>org.andgomes.listener.PlayerServletContextListener</listener-class>
+	</listener>
+
+	<servlet-mapping>
+		<servlet-name>PlayerInfo</servlet-name>
+		<url-pattern>/player-info</url-pattern>
+	</servlet-mapping>
+
+</web-app>
