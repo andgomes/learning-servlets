@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+		 version="2.4">
+
+	<servlet>
+		<servlet-name>PlayerInfo</servlet-name>
+		<servlet-class>org.andgomes.web.PlayerInfoServlet</servlet-class>
+		<init-param>
+			<param-name>player-name</param-name>
+			<param-value>Steven Gerrard</param-value>
+		</init-param>
+	</servlet>
+	
+	<listener>
+		<listener-class>
+			org.andgomes.listener.ClubServletContextListener
+		</listener-class>
+	</listener>
+	
+	<context-param>
+		<param-name>club-name</param-name>
+		<param-value>Liverpool FC</param-value>
+	</context-param>
+	
+	<servlet-mapping>
+		<servlet-name>PlayerInfo</servlet-name>
+		<url-pattern>/info</url-pattern>
+	</servlet-mapping>
+
+</web-app>
