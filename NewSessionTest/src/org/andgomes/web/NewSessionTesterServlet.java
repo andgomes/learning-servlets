@@ -15,6 +15,8 @@ public class NewSessionTesterServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		
+		session.setMaxInactiveInterval(2*60);
+		
 		if (session.isNew()) {
 			request.setAttribute("new-session", new Boolean(true));
 		} else {
