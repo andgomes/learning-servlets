@@ -1,10 +1,17 @@
-<%@ page import="org.andgomes.Counter" %>
-
 <html>
 	<head>
 		<title>Access Counter</title>
 	</head>
 	<body>
-		Access Counter: <%= Counter.getCounter() %>
+		
+		<%! int counter = 0; %>
+		
+		<%!
+			int getCounter() {
+				return ++counter;
+			} 
+		%>
+	
+		Access Counter: <%= getCounter() %>
 	</body>
 </html>
