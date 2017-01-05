@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+		 version="2.4">
+
+	<servlet>
+		<servlet-name>ConfigurationServlet</servlet-name>
+		<jsp-file>/configuration.jsp</jsp-file>
+		<init-param>
+			<param-name>message</param-name>
+			<param-value>Hello, World!</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ConfigurationServlet</servlet-name>
+		<url-pattern>/configuration.jsp</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
