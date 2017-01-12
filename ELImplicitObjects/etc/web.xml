@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+		 version="2.4">
+
+	<servlet>
+		<servlet-name>SessionConfigurator</servlet-name>
+		<servlet-class>org.andgomes.web.SessionConfiguratorServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ShowInfoJSP</servlet-name>
+		<jsp-file>/result.jsp</jsp-file>
+	</servlet>
+
+	<context-param>
+		<param-name>email</param-name>
+		<param-value>andgomes@email.org</param-value>
+	</context-param>
+	
+	<servlet-mapping>
+		<servlet-name>SessionConfigurator</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ShowInfoJSP</servlet-name>
+		<url-pattern>/result</url-pattern>	
+	</servlet-mapping>
+
+</web-app>
