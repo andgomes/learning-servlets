@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+		xmlns:xsi="http://www.w3.org/2001/XLMSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+		version="2.0">
+
+	<tlib-version>1.2</tlib-version>
+	<uri>access-functions</uri>
+	<function>
+		<name>counter</name>
+		<function-class>org.andgomes.util.AccessCounter</function-class>
+		<function-signature>
+			int accessCounter()
+		</function-signature>
+	</function>
+
+</taglib>
