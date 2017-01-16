@@ -5,10 +5,10 @@
 		<title>Index</title>
 	</head>
 	<body>
-		<%@ include file="header.html" %>
+		<jsp:include page="header.html" />
 		
 		It works! <br />
 		
-		<%@ include file="footer.jsp" %>
+		<jsp:include page="footer.jsp" />
 	</body>
 </html>
