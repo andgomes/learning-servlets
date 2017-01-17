@@ -9,6 +9,8 @@
 		
 		It works! <br />
 		
-		<jsp:include page="footer.jsp" />
+		<jsp:include page="footer.jsp">
+			<jsp:param name="sponsor" value="FSF" />
+		</jsp:include>
 	</body>
 </html>
