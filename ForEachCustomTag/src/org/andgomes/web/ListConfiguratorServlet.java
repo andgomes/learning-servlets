@@ -15,11 +15,12 @@ public class ListConfiguratorServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 	
-		List<String> clubList = new ArrayList<>(3);
+		List<String[]> clubList = new ArrayList<>(3);
 		
-		clubList.add("Chelsea");
-		clubList.add("Tottenham");
-		clubList.add("Liverpool");
+		clubList.add(new String[] {"Chelsea", "Tottenham", "Liverpool"});
+		clubList.add(new String[] {"Arsenal", "Manchester City",
+				"Manchester United"});
+		clubList.add(new String[] {"Everton", "West Brom", "Stoke"});
 		
 		request.setAttribute("clubs", clubList);
 		

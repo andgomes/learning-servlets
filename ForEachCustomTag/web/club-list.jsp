@@ -8,10 +8,14 @@
 	<body>
 		List of the first clubs in Premier League: <br />
 		
-		<ul>
-			<c:forEach var="club" items="${clubs}" varStatus="loopStatus">
-				<li>${loopStatus.count}°: ${club}</li>
+		<ol>
+			<c:forEach var="clubsList" items="${clubs}">
+			
+				<c:forEach var="club" items="${clubsList}">
+					<li>${club}</li>
+				</c:forEach>
+				
 			</c:forEach>
-		</ul>
+		</ol>
 	</body>
 </html>
