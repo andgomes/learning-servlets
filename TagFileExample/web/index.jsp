@@ -6,7 +6,12 @@
 		<title>Index</title>
 	</head>
 	<body>
-		<fragment:header siteName="AndGomes Site" />
+		<fragment:header siteName="AndGomes Site">
+			This description just exists to demonstrate how to use body content
+			in a tag file.
+		</fragment:header> <br />
+		<br />
+		This is the page content.
 	</body>
 </html>
 
