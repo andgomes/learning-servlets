@@ -5,6 +5,21 @@
 		 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 		 version="2.4">
 
+	<servlet>
+		<servlet-name>MyServlet</servlet-name>
+		<servlet-class>org.andgomes.web.MyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>MyServlet</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>FilterThree</filter-name>
+		<filter-class>org.andgomes.web.FilterThree</filter-class>
+	</filter>
+
 	<filter>
 		<filter-name>FilterOne</filter-name>
 		<filter-class>org.andgomes.web.FilterOne</filter-class>
@@ -14,6 +29,11 @@
 		<filter-name>FilterTwo</filter-name>
 		<filter-class>org.andgomes.web.FilterTwo</filter-class>
 	</filter>
+	
+	<filter-mapping>
+		<filter-name>FilterThree</filter-name>
+		<servlet-name>MyServlet</servlet-name>
+	</filter-mapping>
 	
 	<filter-mapping>
 		<filter-name>FilterOne</filter-name>
