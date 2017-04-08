@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+		 version="2.4">
+
+	<servlet>
+		<servlet-name>FavouriteTeamChecker</servlet-name>
+		<servlet-class>
+			org.andgomes.web.FavouriteTeamCheckerServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>FavouriteTeamConfigurator</servlet-name>
+		<servlet-class>
+			org.andgomes.web.FavouriteTeamConfiguratorServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>FavouriteTeamChecker</servlet-name>
+		<url-pattern>/index.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FavouriteTeamConfigurator</servlet-name>
+		<url-pattern>/favouriteConfiguration</url-pattern>
+	</servlet-mapping>
+
+</web-app>
